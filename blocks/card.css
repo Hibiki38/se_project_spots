@@ -53,6 +53,8 @@
 
   .card__like-btn {
     margin: 12px 0 22px;
+    width: 20px;
+    height: 18px;
   }
 
   .card__title {
