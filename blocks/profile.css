@@ -98,6 +98,7 @@
 
   .profile__name-card {
     text-align: center;
+    align-items: center;
   }
 
   .profile__description {
