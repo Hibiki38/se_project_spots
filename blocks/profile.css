@@ -66,17 +66,19 @@
 
 .profile__edit-btn {
   margin-top: auto;
-  width: 107.34px;
   border: none;
   padding: 1px 0;
   background: rgba(252, 245, 229, 1);
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
+  width: 107.34px;
 }
 
 .profile__plus-icon {
   margin: 0 8px 0 0;
+  height: 12px;
+  width: 12px;
 }
 
 @media screen and (max-width: 627px) {
@@ -99,6 +101,7 @@
   .profile__name-card {
     text-align: center;
     align-items: center;
+    max-width: 288px;
   }
 
   .profile__description {
@@ -115,10 +118,16 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 1;
+    padding: 0;
+    border: none;
+  }
+
+  .profile__plus-icon {
+    margin: 0 2px 0 0;
   }
 
   .profile__edit-btn {
-    margin: 0 auto 20px;
+    margin: 0 0 20px;
     font-size: 16px;
     line-height: 1;
     font-weight: 500;
