@@ -22,3 +22,6 @@ This is the third project from TripleTen. It was created using HTML and CSS, bas
 
 **GitHub Page**
 [https://hibiki38.github.io/se_project_spots/]
+
+**Project Video**
+[https://www.loom.com/share/1ead6b1a9aa943f8b7e9ba706463b248?sid=c624454b-1d44-43c8-ab15-efcd19acd10a]
