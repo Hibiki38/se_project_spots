@@ -27,6 +27,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .card__like-btn:hover {
@@ -34,8 +35,9 @@
 }
 
 .card__like-btn_liked {
-  background-image: url("../images/heart-icon-liked.svg");
+  background-image: url("../images/heart-liked.svg");
   opacity: 1;
+  background-color: transparent;
 }
 
 .card__like-btn_liked:hover {

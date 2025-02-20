@@ -145,6 +145,7 @@
 
   .modal__container {
     padding: 12px 12px;
+    width: 288px;
   }
 
   .modal__label {
