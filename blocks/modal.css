@@ -144,8 +144,7 @@
   }
 
   .modal__container {
-    padding: 12px 12px;
-    width: 288px;
+    max-width: 288px;
   }
 
   .modal__label {
@@ -156,18 +155,17 @@
     width: 100%;
   }
 
+  .modal__image {
+    border-radius: 4px;
+  }
+
   .modal__close-btn {
     top: 12px;
     right: 12px;
   }
 
-  .modal__image {
-    max-width: 288px;
-    border-radius: 4px;
-  }
-
   .modal__close-btn_preview {
-    right: 16px;
-    top: -21px;
+    right: 0px;
+    top: -35px;
   }
 }
