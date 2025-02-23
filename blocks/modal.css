@@ -133,10 +133,15 @@
   .modal__container_preview {
     width: 288px;
   }
+
+  .modal__container {
+    padding: 0 12px;
+  }
+
   .modal__title {
     font-size: 20px;
     line-height: 1;
-    margin: 12px 12 24px;
+    margin-top: 12px;
   }
 
   .modal__input {
@@ -154,6 +159,7 @@
 
   .modal__save-btn {
     width: 100%;
+    margin-bottom: 12px;
   }
 
   .modal__image {
