@@ -123,10 +123,12 @@ function handleAddNewCard(evt) {
 }
 
 profileEditButton.addEventListener("click", () => {
-  openModal(editModal);
+  resetValidation(editFormElement, [editModalNameInput, editModalDescription]);
   editModalNameInput.value = profileName.textContent;
   editModalDescription.value = description.textContent;
+  openModal(editModal);
 });
+
 profileCloseButton.addEventListener("click", () => {
   closeModal(editModal);
 });
