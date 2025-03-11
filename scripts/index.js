@@ -118,15 +118,19 @@ function handleAddNewCard(evt) {
   const cardEl = getCardElement(inputValues);
   cardsList.prepend(cardEl);
   evt.target.reset();
-  disableButton(cardSubmitButton);
+  disableButton(cardSubmitButton, settings);
   closeModal(cardModal);
 }
 
 profileEditButton.addEventListener("click", () => {
-  resetValidation(editFormElement, [editModalNameInput, editModalDescription]);
   editModalNameInput.value = profileName.textContent;
   editModalDescription.value = description.textContent;
   openModal(editModal);
+  resetValidation(
+    editFormElement,
+    [editModalNameInput, editModalDescription],
+    settings
+  );
 });
 
 profileCloseButton.addEventListener("click", () => {

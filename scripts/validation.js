@@ -8,19 +8,15 @@ const settings = {
 };
 
 const showInputError = (formElement, inputElement, errorMessage, config) => {
-  const errorMsgElement = formElement.querySelector(
-    `#${inputElement.id}-error`
-  );
+  const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
   errorMsgElement.textContent = errorMessage;
-  inputElement.classList.add(config.config.errorClass);
+  inputElement.classList.add(config.inputErrorClass);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
-  const errorMsgElement = formElement.querySelector(
-    `#${inputElement.id}-error`
-  );
+  const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
   errorMsgElement.textContent = "";
-  inputElement.classList.remove(config.errorClass);
+  inputElement.classList.remove(config.inputErrorClass);
 };
 
 const checkInputValidity = (formElement, inputElement, config) => {
