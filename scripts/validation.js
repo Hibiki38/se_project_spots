@@ -12,7 +12,7 @@ const showInputError = (formElement, inputElement, errorMessage, config) => {
     `#${inputElement.id}-error`
   );
   errorMsgElement.textContent = errorMessage;
-  inputElement.classList.add(config.inputErrorClass);
+  inputElement.classList.add(config.config.errorClass);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
@@ -20,7 +20,7 @@ const hideInputError = (formElement, inputElement, config) => {
     `#${inputElement.id}-error`
   );
   errorMsgElement.textContent = "";
-  inputElement.classList.remove(config.inputErrorClass);
+  inputElement.classList.remove(config.errorClass);
 };
 
 const checkInputValidity = (formElement, inputElement, config) => {
@@ -56,7 +56,7 @@ const disableButton = (buttonElement, config) => {
   buttonElement.classList.add(config.inactiveButtonClass);
 };
 
-const resetValidation = (formElement, inputList) => {
+const resetValidation = (formElement, inputList, config) => {
   inputList.forEach((input) => {
     hideInputError(formElement, input, config);
   });
@@ -70,8 +70,8 @@ const setEventListeners = (formElement, config) => {
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", () => {
-      checkInputValidity(formElement, inputElement);
-      toggleButtonState(inputList, buttonElement);
+      checkInputValidity(formElement, inputElement, config);
+      toggleButtonState(inputList, buttonElement, config);
     });
   });
 };
@@ -79,7 +79,7 @@ const setEventListeners = (formElement, config) => {
 const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formElement) => {
-    setEventListeners(formElement);
+    setEventListeners(formElement, config);
   });
 };
 

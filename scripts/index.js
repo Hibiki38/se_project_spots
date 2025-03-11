@@ -118,7 +118,7 @@ function handleAddNewCard(evt) {
   const cardEl = getCardElement(inputValues);
   cardsList.prepend(cardEl);
   evt.target.reset();
-  disableButton(cardSubmitButton, settings);
+  disableButton(cardSubmitButton);
   closeModal(cardModal);
 }
 
