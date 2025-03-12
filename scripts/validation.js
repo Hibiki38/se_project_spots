@@ -8,15 +8,23 @@ const settings = {
 };
 
 const showInputError = (formElement, inputElement, errorMessage, config) => {
-  const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
-  errorMsgElement.textContent = errorMessage;
-  inputElement.classList.add(config.inputErrorClass);
+  const errorMsgElement = formElement.querySelector(
+    `#${inputElement.id}-error`
+  );
+  if (errorMsgElement) {
+    inputElement.classList.add(config.inputErrorClass);
+    errorMsgElement.textContent = errorMessage;
+  }
 };
 
 const hideInputError = (formElement, inputElement, config) => {
-  const errorMsgElement = document.querySelector(`#${inputElement.id}-error`);
-  errorMsgElement.textContent = "";
+  const errorMsgElement = formElement.querySelector(
+    `#${inputElement.id}-error`
+  );
   inputElement.classList.remove(config.inputErrorClass);
+  if (errorMsgElement) {
+    errorMsgElement.textContent = "";
+  }
 };
 
 const checkInputValidity = (formElement, inputElement, config) => {

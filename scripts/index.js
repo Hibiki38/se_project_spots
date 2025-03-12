@@ -90,19 +90,24 @@ function handleEscapeKey(evt) {
   }
 }
 
+function handleClickOverlay(modal, evt) {
+  if (evt.target === modal) {
+    closeModal(modal);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", handleEscapeKey);
-  modal.addEventListener("click", (evt) => {
-    if (evt.target === modal) {
-      closeModal(modal);
-    }
-  });
+  modal.addEventListener("mousedown", (evt) => handleClickOverlay(modal, evt));
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
   document.removeEventListener("keydown", handleEscapeKey);
+  modal.removeEventListener("mousedown", (evt) =>
+    handleClickOverlay(modal, evt)
+  );
 }
 
 function handleProfileFormSubmit(evt) {
