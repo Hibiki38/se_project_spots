@@ -90,16 +90,16 @@ function handleEscapeKey(evt) {
   }
 }
 
-function handleClickOverlay(modal, evt) {
-  if (evt.target === modal) {
-    closeModal(modal);
+function handleClickOverlay(evt) {
+  if (evt.target.classList.contains("modal_opened")) {
+    closeModal(evt.target);
   }
 }
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", handleEscapeKey);
-  modal.addEventListener("mousedown", (evt) => handleClickOverlay(modal, evt));
+  modal.addEventListener("mousedown", handleClickOverlay);
 }
 
 function closeModal(modal) {
