@@ -31,6 +31,12 @@
   box-sizing: border-box;
 }
 
+.modal__container_delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .modal__container_preview {
   padding: 0;
   background-color: transparent;
@@ -46,8 +52,12 @@
   border: none;
   background-image: url(../images/close-icon.svg);
   background-position: center;
-  background-color: #fff;
+  background-color: transparent;
   cursor: pointer;
+}
+
+.modal__close-btn_delete {
+  background-image: url(../images/closeIconwhite.svg);
 }
 
 .modal__close-btn_preview {
@@ -95,6 +105,16 @@
 .modal__save-btn_grey_out {
   background-color: #212121;
   opacity: 0.5;
+}
+
+.modal__save-btn_delete {
+  background-color: #ff6565;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.modal__save-btn_cancel {
+  cursor: pointer;
 }
 
 .modal__input {
