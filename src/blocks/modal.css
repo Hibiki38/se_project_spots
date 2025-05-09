@@ -29,6 +29,7 @@
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__container_delete {
@@ -58,6 +59,8 @@
 
 .modal__close-btn_delete {
   background-image: url(../images/closeIconwhite.svg);
+  top: -5px;
+  right: -40px;
 }
 
 .modal__close-btn_preview {
@@ -113,8 +116,20 @@
   margin-right: 20px;
 }
 
+.modal__save-btn_delete:hover {
+  background-color: #ff3333;
+}
+
 .modal__save-btn_cancel {
   cursor: pointer;
+  background-color: #fff;
+  color: #212121;
+  border: 1px solid black;
+}
+
+.modal__save-btn_cancel:hover {
+  background-color: #212121;
+  color: #fff;
 }
 
 .modal__input {

@@ -67,10 +67,10 @@ api
     console.log(cards);
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
-      cardsList.prepend(cardElement);
+      cardsList.append(cardElement);
     });
     profileName.textContent = users.name;
-    description.textContent = users.description;
+    description.textContent = users.about;
     profileAvatar.src = users.avatar;
   })
   .catch((err) => {
