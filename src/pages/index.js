@@ -64,7 +64,6 @@ const api = new Api({
 api
   .getAppInfo()
   .then(([cards, users]) => {
-    console.log(cards);
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
       cardsList.append(cardElement);
@@ -219,7 +218,9 @@ function handleDeleteSubmit(evt) {
     .catch((err) => {
       console.error(err);
     })
-    .finally(submitBtn, false);
+    .finally(() => {
+      setDeleteButtontext(submitBtn, false);
+    });
 }
 
 function handleDeleteCard(cardElement, cardId) {
